@@ -1,0 +1,35 @@
+@use '../styles/variables' as v;
+
+.footer {
+  background: var(--ink-2); color: var(--text-faint); padding: 72px 0 30px; border-top: 1px solid var(--line);
+
+  h4 {
+    color: var(--brass); font-family: v.$font-body; font-size: .7rem; letter-spacing: .14em;
+    text-transform: uppercase; font-weight: 600; margin-bottom: 18px;
+  }
+  a {
+    color: var(--text-soft); display: block; padding: 6px 0; font-size: .92rem;
+    &:hover { color: var(--brass-light); }
+  }
+}
+.footer-logo { color: var(--ivory); margin-bottom: 0; }
+.footer-grid > div:first-child p { margin-top: 16px; max-width: 280px; }
+.footer-grid {
+  display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px;
+
+  @media (max-width: v.$breakpoint-footer) { grid-template-columns: 1fr 1fr; }
+}
+.footer-bottom {
+  margin-top: 52px; padding-top: 26px; border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  font-size: .78rem; color: var(--text-faint);
+}
+.social-row {
+  display: flex; gap: 12px; margin-top: 16px;
+
+  a {
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line-strong);
+    display: flex; align-items: center; justify-content: center; padding: 0; font-size: .78rem;
+    &:hover { border-color: var(--brass); color: var(--brass-light); }
+  }
+}

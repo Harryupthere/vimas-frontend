@@ -1,0 +1,36 @@
+@use '../styles/variables' as v;
+
+.products-hero { padding-bottom: 28px; }
+.products-hero__container { max-width: 760px; }
+.products-hero__title { font-size: clamp(2.3rem, 4.6vw, 3.3rem); }
+.products-hero__lede { font-size: 1.05rem; }
+
+.products-section { padding-top: 0; }
+.products-grid { margin-top: 34px; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+.prod-body__title { font-size: 1.02rem; }
+.prod-body__seller { margin: 6px 0; }
+.prod-body__row { display: flex; justify-content: space-between; align-items: center; }
+.prod-body__price { font-weight: 700; color: var(--ivory); }
+.add-cart { width: 100%; margin-top: 14px; }
+
+.products-detail {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
+
+  @media (max-width: v.$breakpoint-nav) { grid-template-columns: 1fr; }
+}
+.products-detail__img { aspect-ratio: 4/3; border-radius: 6px; background: linear-gradient(150deg, #EDE4C9, #DCCE9E); color: var(--brass-deep); }
+.products-detail__title { margin-top: 16px; }
+.products-detail__stats {
+  display: flex; align-items: center; gap: 22px; margin: 22px 0;
+  background: var(--ink); padding: 22px; border-radius: 8px;
+}
+.products-detail__ring { max-width: 110px; }
+.products-detail__ring-num { font-size: 1.3rem !important; }
+.products-detail__price { font-weight: 700; font-size: 1.2rem; color: var(--ivory); }
+
+.products-merchant-cta {
+  text-align: center; max-width: 640px; margin: 0 auto;
+
+  .products-merchant-cta__eyebrow { justify-content: center; }
+}

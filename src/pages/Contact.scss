@@ -1,0 +1,19 @@
+@use '../styles/variables' as v;
+
+.contact-hero { padding-bottom: 20px; }
+.contact-hero__container { max-width: 680px; }
+.contact-hero__title { font-size: clamp(2.3rem, 4.6vw, 3.3rem); }
+.contact-hero__lede { font-size: 1.1rem; }
+
+.contact-section { padding-top: 0; }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; max-width: 980px;
+
+  @media (max-width: v.$breakpoint-tablet) { grid-template-columns: 1fr; }
+}
+.contact-submit { width: 100%; }
+.contact-note { font-size: .78rem; margin-top: 16px; color: var(--text-faint); }
+.contact-email { margin-bottom: 26px; }
+.contact-social { margin-top: 0; }
+.contact-faq-heading { margin-top: 36px; }
+.contact-faq-link { color: var(--brass-light); font-weight: 600; text-decoration: underline; }

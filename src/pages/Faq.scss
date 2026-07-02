@@ -1,0 +1,13 @@
+.faq-hero { padding-bottom: 20px; }
+.faq-hero__container { max-width: 680px; }
+.faq-hero__title { font-size: clamp(2.3rem, 4.6vw, 3.3rem); }
+.faq-hero__lede { font-size: 1.1rem; }
+
+.faq-section { padding-top: 0; }
+.faq-section__container { max-width: 760px; }
+
+.faq-group-heading {
+  margin: 36px 0 8px; color: var(--brass-light); font-style: italic;
+
+  &:first-child { margin-top: 0; margin-bottom: 8px; }
+}

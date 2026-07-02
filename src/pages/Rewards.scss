@@ -1,0 +1,21 @@
+@use '../styles/variables' as v;
+
+.rewards-hero { padding-bottom: 24px; }
+.rewards-hero__container { max-width: 760px; }
+.rewards-hero__title { font-size: clamp(2.3rem, 4.6vw, 3.5rem); }
+.rewards-hero__lede { font-size: 1.1rem; }
+
+.rewards-ways { padding-top: 10px; }
+
+.rewards-hybrid__title, .rewards-hybrid__lede { max-width: 640px; }
+.rewards-hybrid__grid { margin-top: 32px; }
+
+.rewards-redeem {
+  display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: center;
+
+  @media (max-width: v.$breakpoint-nav) { grid-template-columns: 1fr; }
+}
+.rewards-redeem__ring-box {
+  background: var(--ink-2); border: 1px solid var(--line); border-radius: 8px; padding: 40px;
+}
+.rewards-redeem__ring-wrap { max-width: 220px; margin: 0 auto; }

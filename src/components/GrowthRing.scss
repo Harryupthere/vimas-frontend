@@ -1,0 +1,18 @@
+.ring-wrap {
+  position: relative; display: flex; align-items: center; justify-content: center;
+
+  svg { width: 100%; height: auto; }
+}
+.ring-bg { fill: none; stroke: var(--line); }
+.ring-fill {
+  fill: none; stroke: var(--brass); stroke-linecap: round;
+  transform-origin: center; transform: rotate(-90deg);
+
+  &--sage { stroke: var(--sage); }
+}
+.ring-center {
+  position: absolute; text-align: center;
+
+  .num { font-family: 'Fraunces', serif; font-size: 2.1rem; color: var(--ivory); font-weight: 500; }
+  .lbl { font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); }
+}

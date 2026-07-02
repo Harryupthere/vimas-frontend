@@ -1,0 +1,30 @@
+.member-card {
+  position: relative; width: 100%; max-width: 400px; aspect-ratio: 1.58/1;
+  background: linear-gradient(155deg, #182019 0%, #10160F 72%);
+  border: 1px solid var(--line-strong); border-radius: 14px;
+  padding: 26px 28px; display: flex; flex-direction: column; justify-content: space-between;
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+
+  &::before {
+    content: ''; position: absolute; inset: 8px; border: 1px solid rgba(231, 211, 160, .14);
+    border-radius: 9px; pointer-events: none;
+  }
+}
+.mc-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.mc-brand { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.15rem; color: var(--ivory); }
+.mc-tier {
+  font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brass);
+  border: 1px solid var(--brass-deep); padding: 4px 9px; border-radius: 99px;
+}
+.mc-mid { display: flex; align-items: center; gap: 18px; }
+.mc-ring { max-width: 96px; }
+.mc-ring-num { font-size: 1.15rem !important; }
+.mc-number { font-family: 'Fraunces', serif; font-size: .95rem; letter-spacing: .08em; color: var(--text-soft); }
+.mc-label { font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 3px; }
+.mc-bottom {
+  display: flex; justify-content: space-between; align-items: flex-end;
+
+  .mc-number { font-size: 1.1rem; }
+}
+.mc-url { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--text-faint); }

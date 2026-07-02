@@ -1,0 +1,60 @@
+@use '../styles/variables' as v;
+
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(13, 19, 16, .88); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1180px; margin: 0 auto; padding: 18px 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.logo {
+  display: flex; align-items: baseline; gap: 9px;
+  font-family: v.$font-display; font-style: italic; font-weight: 500; font-size: 1.32rem;
+  color: var(--ivory); letter-spacing: .01em;
+
+  .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--brass); display: inline-block; }
+}
+.nav-links {
+  display: flex; align-items: center; gap: 32px; font-size: .84rem; font-weight: 500;
+  color: var(--text-soft); letter-spacing: .01em;
+
+  a { position: relative; padding: 4px 0; &:hover { color: var(--ivory); } }
+}
+.nav-cta {
+  display: flex; align-items: center; gap: 14px;
+
+  .nav-cta__login, .nav-cta__join { padding: 11px 20px; font-size: .82rem; }
+  .nav-cta__join { padding: 11px 22px; }
+}
+.cart-btn {
+  position: relative; padding: 11px 18px; font-size: .82rem;
+}
+.cart-count {
+  position: absolute; top: -8px; right: -8px; background: var(--brass); color: var(--ink);
+  font-size: .66rem; font-weight: 700; width: 18px; height: 18px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-toggle {
+  display: none; background: none; border: none; cursor: pointer; color: var(--ivory); font-size: 1.3rem;
+}
+
+@media (max-width: v.$breakpoint-nav) {
+  .nav-links {
+    display: none;
+
+    &--open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 64px; left: 0; right: 0;
+      background: #F5F6F0;
+      padding: 20px 32px;
+      border-bottom: 1px solid #D9D5C4;
+
+      a { color: #141C17; }
+    }
+  }
+  .nav-toggle { display: block; }
+}

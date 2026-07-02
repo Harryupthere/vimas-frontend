@@ -1,0 +1,28 @@
+// ============================================================
+// VIMAS — design tokens
+// Palette: near-black pine ink + brushed brass + warm ivory insert
+// Type: Fraunces (display, italic used as an editorial voice) + Inter
+// ============================================================
+
+// Exposed as SCSS variables (for use in calculations/mixins)
+$ink:         #0D1310;
+$ink-2:       #141C17;
+$ink-3:       #1B241E;
+$ivory:       #F4EFE3;
+$ivory-dim:   #E7E0CE;
+$text:        #EDE8DA;
+$brass:       #C6A15B;
+$brass-light: #E7D3A0;
+$brass-deep:  #9C7C3F;
+$sage:        #7C9384;
+$line-dark:   #DAD2B8;
+$shadow:      0 24px 60px -24px rgba(0, 0, 0, .55);
+$radius:      3px;
+
+$font-display: 'Fraunces', Georgia, serif;
+$font-body: 'Inter', system-ui, sans-serif;
+
+$breakpoint-mobile: 720px;
+$breakpoint-tablet: 860px;
+$breakpoint-nav: 920px;
+$breakpoint-footer: 800px;

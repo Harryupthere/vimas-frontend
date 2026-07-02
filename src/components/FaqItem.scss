@@ -1,0 +1,13 @@
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-q {
+  display: flex; align-items: center; justify-content: space-between; padding: 24px 0; cursor: pointer;
+  font-weight: 560; font-family: 'Fraunces', serif; font-size: 1.1rem; color: var(--ivory);
+}
+.faq-a {
+  max-height: 0; overflow: hidden; transition: max-height .25s ease;
+}
+.faq-item.open .faq-a { max-height: 400px; padding-bottom: 22px; }
+.faq-icon { transition: transform .2s ease; color: var(--brass); font-size: 1.3rem; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
