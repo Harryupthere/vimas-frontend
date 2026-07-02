@@ -10,6 +10,7 @@ import Join from './pages/Join';
 import Register from './pages/Register';
 import Checkout from './pages/Checkout';
 
+
 export default function App() {
   return (
     <BrowserRouter>
