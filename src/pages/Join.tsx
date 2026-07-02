@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import './Join.scss';
@@ -72,6 +73,9 @@ export default function Join() {
                   </button>
                 </form>
                 <p className="join-panel__terms">By joining you agree to the Vimas Terms and Rewards Policy.</p>
+                <p className="join-panel__terms">
+                  Want to set a password now? <Link to="/register" className="join-panel__link">Create a full account</Link>.
+                </p>
               </div>
             </div>
           )}

@@ -7,6 +7,8 @@ import About from './pages/About';
 import Faq from './pages/Faq';
 import Contact from './pages/Contact';
 import Join from './pages/Join';
+import Register from './pages/Register';
+import Checkout from './pages/Checkout';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/join" element={<Join />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );

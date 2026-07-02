@@ -31,8 +31,9 @@ export default function Footer() {
           </div>
           <div>
             <h4>Get Started</h4>
-            <Link to="/join">Become a Shopper</Link>
+            <Link to="/register">Create an Account</Link>
             <Link to="/join">Become a Merchant</Link>
+            <Link to="/checkout">Checkout</Link>
           </div>
         </div>
         <div className="footer-bottom">

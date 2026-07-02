@@ -5,7 +5,6 @@ import './Navbar.scss';
 interface NavbarProps {
   showLogin?: boolean;
   cartCount?: number;
-  onCartClick?: () => void;
 }
 
 const navLinks = [
@@ -18,7 +17,7 @@ const navLinks = [
   { to: '/contact', label: 'Contact' },
 ];
 
-export default function Navbar({ showLogin, cartCount, onCartClick }: NavbarProps) {
+export default function Navbar({ showLogin, cartCount }: NavbarProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -32,9 +31,9 @@ export default function Navbar({ showLogin, cartCount, onCartClick }: NavbarProp
         </nav>
         <div className="nav-cta">
           {cartCount !== undefined && (
-            <button className="btn btn-outline cart-btn" onClick={onCartClick}>
+            <Link to="/checkout" className="btn btn-outline cart-btn">
               Cart<span className="cart-count">{cartCount}</span>
-            </button>
+            </Link>
           )}
           {showLogin && <Link to="/join" className="btn btn-outline nav-cta__login">Log In</Link>}
           <Link to="/join" className="btn btn-primary nav-cta__join">Join Free</Link>
