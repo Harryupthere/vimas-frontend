@@ -9,6 +9,16 @@ import Contact from './pages/Contact';
 import Join from './pages/Join';
 import Register from './pages/Register';
 import Checkout from './pages/Checkout';
+import DashboardLayout from './pages/dashboard/DashboardLayout';
+import DashboardHome from './pages/dashboard/DashboardHome';
+import DashboardProducts from './pages/dashboard/Products';
+import DashboardMall from './pages/dashboard/Mall';
+import DashboardRewards from './pages/dashboard/Rewards';
+import DashboardOrders from './pages/dashboard/Orders';
+import DashboardPurchaseHistory from './pages/dashboard/PurchaseHistory';
+import DashboardProfile from './pages/dashboard/Profile';
+import DashboardNotifications from './pages/dashboard/Notifications';
+import DashboardSupport from './pages/dashboard/Support';
 
 
 export default function App() {
@@ -25,6 +35,18 @@ export default function App() {
         <Route path="/join" element={<Join />} />
         <Route path="/register" element={<Register />} />
         <Route path="/checkout" element={<Checkout />} />
+
+        <Route path="/dashboard" element={<DashboardLayout />}>
+          <Route index element={<DashboardHome />} />
+          <Route path="products" element={<DashboardProducts />} />
+          <Route path="mall" element={<DashboardMall />} />
+          <Route path="rewards" element={<DashboardRewards />} />
+          <Route path="orders" element={<DashboardOrders />} />
+          <Route path="purchase-history" element={<DashboardPurchaseHistory />} />
+          <Route path="profile" element={<DashboardProfile />} />
+          <Route path="notifications" element={<DashboardNotifications />} />
+          <Route path="support" element={<DashboardSupport />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Dashboard design tokens for shadcn/ui components.
+   Derived from the site-wide ink/brass/ivory palette in
+   src/styles/_variables.scss — single fixed theme, no dark/light
+   toggle (the rest of the site doesn't have one either).
+   ============================================================ */
+@layer base {
+  /* Preflight is off (see tailwind.config.js) to protect the existing SCSS
+     site's heading/margin resets, but that also means native form elements
+     keep their browser chrome (opaque button backgrounds, default fonts)
+     unless normalized here — scoped to just those elements. */
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+  button,
+  [type='button'],
+  [type='reset'],
+  [type='submit'] {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+  }
+
+  :root {
+    --background: 150 19% 6%;
+    --foreground: 44 35% 89%;
+    --card: 143 17% 9%;
+    --card-foreground: 44 35% 89%;
+    --popover: 143 17% 9%;
+    --popover-foreground: 44 35% 89%;
+    --primary: 39 48% 57%;
+    --primary-foreground: 150 19% 6%;
+    --secondary: 140 14% 12%;
+    --secondary-foreground: 44 35% 89%;
+    --muted: 140 14% 12%;
+    --muted-foreground: 44 12% 65%;
+    --accent: 43 60% 77%;
+    --accent-foreground: 150 19% 6%;
+    --destructive: 9 59% 44%;
+    --destructive-foreground: 44 35% 89%;
+    --border: 140 14% 16%;
+    --input: 140 14% 16%;
+    --ring: 39 48% 57%;
+    --radius: 3px;
+
+    --sidebar-background: 150 19% 6%;
+    --sidebar-foreground: 44 35% 89%;
+    --sidebar-primary: 39 48% 57%;
+    --sidebar-primary-foreground: 150 19% 6%;
+    --sidebar-accent: 143 17% 9%;
+    --sidebar-accent-foreground: 44 35% 89%;
+    --sidebar-border: 140 14% 16%;
+    --sidebar-ring: 39 48% 57%;
+  }
+}
